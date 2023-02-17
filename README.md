@@ -14,12 +14,12 @@ You are tasked to create a simple page with Users Table for the administrator si
 NOTE: The exam should be based on the sample code. 
 
 ### A user should be able to do the following functionalities:
-- View home page or dashboard with your personal information (basic introduction)
-- View the list of users
-- Create a user
-- View the profile of the user
-- Update a user
-- Delete a user
+- [x] View home page or dashboard with your personal information (basic introduction)
+- [x] View the list of users
+- [x] Create a user
+- [x] View the profile of the user
+- [x] Update a user
+- [x] Delete a user
 
 There will be a test API for you to use and make things work on your end, it will be provided down below.
 
@@ -33,42 +33,37 @@ There will be a test API for you to use and make things work on your end, it wil
 
 ### Requirements
 
-1. Home
-   - Directory: `/` (root)
-   - Content: {yourName}, {email}
+#### 1. Home
+- Directory: `/` (root)
+- Content: {yourName}, {email}
 
- 
-2. Users 
-   - Directory: `/users`
-   - Functions: View listing, Update user, Create user, Delete user
+#### 2. Users 
+- Directory: `/users`
+- Functions: View listing, Update user, Create user, Delete user
 
+#### 3. Users Listing Table
+- Please create a "Add User" button above the table
+- Should have 10 rows per page
+- Columns: ID, Avatar, Email, First Name, Last Name, Actions Button (Edit, Delete)
 
-3. Users Listing Table
-   - Please create a "Add User" button above the table
-   - Should have 10 rows per page
-   - Columns: ID, Avatar, Email, First Name, Last Name, Actions Button (Edit, Delete)
+#### 4. Create User Modal (Can be shown by Create button or icon)
+- Modal title: Edit User
+- Should have a form and input fields that will submit the personal information of the user to be added
+- Adds a row data that contains ID, avatar (placeholder), email, first name and last name
+- Submit input fields - email, first name and last name (skip avatar)
+- Should have a submit and cancel button with a functionality to handle on close and create.
 
+#### 5. Edit User Modal (Can be shown by Edit Button)
+- Modal title: Edit User
+- Should have a form and input fields that will submit the personal information of the user to be updated by its ID
+- Editable input fields - email, first name and last name (skip avatar)
+- Should have a submit and cancel button with a functionality to handle on close and update.
 
-4. Create User Modal (Can be shown by Create button or icon)
-   - Modal title: Edit User
-   - Should have a form and input fields that will submit the personal information of the user to be added
-   - Adds a row data that contains ID, avatar (placeholder), email, first name and last name
-   - Submit input fields - email, first name and last name (skip avatar)
-   - Should have a submit and cancel button with a functionality to handle on close and create.
-
-
-5. Edit User Modal (Can be shown by Edit Button)
-   - Modal title: Edit User
-   - Should have a form and input fields that will submit the personal information of the user to be updated by its ID
-   - Editable input fields - email, first name and last name (skip avatar)
-   - Should have a submit and cancel button with a functionality to handle on close and update.
-
-
-6. Delete User Modal (Can be shown by Delete Button)
-   - Modal title: Delete User
-   - Should display a static view of the selected user
-   - Displace ID, avatar, email, first name and last name
-   - Should have a submit and cancel button with a functionality to handle on close and delete
+#### 6. Delete User Modal (Can be shown by Delete Button)
+- Modal title: Delete User
+- Should display a static view of the selected user
+- Displace ID, avatar, email, first name and last name
+- Should have a submit and cancel button with a functionality to handle on close and delete
 
 ### Optionals
 - Add validation and error handlers on submit (Create, Update, Delete)
@@ -80,36 +75,35 @@ There will be a test API for you to use and make things work on your end, it wil
 
 ### APIs (Document: REQ | RES API)
 
-Get the list of users
+#### Get the list of users
 ```
 Method: GET
 URL: https://reqres.in/api/users?page=1
 ```
 
-Get user by ID
+#### Get user by ID
 ```
 Method: GET
 URL: https://reqres.in/api/users/{id}
 ```
 
-Create user
+#### Create user
 ```
 Method: POST
 URL: https://reqres.in/api/users
 ```
 
-Update user by ID
+#### Update user by ID
 ```
 Method: PUT
 URL: https://reqres.in/api/users/{id}
 ```
 
-Delete user by ID
+#### Delete user by ID
 ```
 Method: DELETE
 URL: https://reqres.in/api/users/{id}
 ```
-
 
 --------------------------------------------------------------------------------
 
