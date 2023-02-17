@@ -66,6 +66,7 @@ There will be a test API for you to use and make things work on your end, it wil
 - Should have a submit and cancel button with a functionality to handle on close and delete
 
 ### Optionals
+- Decorate the page beautifully.
 - Add validation and error handlers on submit (Create, Update, Delete)
 - Use of async and await / Promises
 - Handle open and close modals using route
