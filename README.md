@@ -21,8 +21,6 @@ NOTE: The exam should be based on the sample code.
 - [x] Update a user
 - [x] Delete a user
 
-There will be a test API for you to use and make things work on your end, it will be provided down below.
-
 ### Instructions
 - Should have 2 directories `/` and `/users`
 - Use react-create-app, SCSS or LESS
@@ -30,6 +28,7 @@ There will be a test API for you to use and make things work on your end, it wil
 - Do not use any frameworks, please use the given react app build for you to start. Except for ant design or reactstrap you may use it to make your app look good.
 - Please be strict on using coding standards, follow airbnb’s coding style guide (https://github.com/airbnb/javascript)
 - As for writing code and design patterns, if you want to modify or upgrade it's all yours. Show us what you got in terms of coding structure and best practices.
+- There will be API for you to use and make things work on your end, it will be provided down below.
 
 ### Requirements
 
