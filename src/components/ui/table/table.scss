@@ -1,0 +1,110 @@
+
+.edit-button{
+  background-color: rgb(112, 197, 56);
+  border:none;
+}
+
+.delete-button{
+  background-color: rgb(199, 57, 59);
+  border:none;
+}
+
+.user-action{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-table-wrapper {
+  width:80vw;
+  max-width: 80vw;
+  height: 50%;
+  overflow-x: auto; 
+  border-radius: 0.5rem; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+
+  .custom-table {
+    width: 100%; 
+    height: 30vh;
+    border-collapse: collapse; 
+    margin-bottom: 0; 
+  }
+}
+
+.custom-table {
+  thead {
+    background-color: #f8f9fa; // Light gray background for the header
+    th {
+      background-color: #595959;
+      color: #f8f9fa; // Dark gray text color
+      font-weight: 500;
+      text-align: center;
+      padding: 0.75rem; 
+      border: none;
+    }
+    
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: #f2f2f2; // Alternating row colors
+      }
+
+      &:hover {
+        background-color: #e9ecef; // Light gray background on hover
+      }
+
+      td {
+        padding: 0.55rem; // 12px
+        text-align: center;
+        vertical-align: middle;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; // Prevents overflow of content
+        text-overflow: ellipsis; // Adds ellipsis for overflow text
+        border: none;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #dee2e6; // Light gray border
+      }
+      
+    }
+  }
+
+  .avatar-img {
+    border-radius: 50%; // Circular avatars
+    width: 3rem; // 48px
+    height: 3rem; // 48px
+    object-fit: cover; // Ensure the image covers the space
+  }
+
+  .btn {
+    font-size: 0.875rem; // 14px
+    padding: 0.5rem 1rem; // 8px 16px
+    border-radius: 0.25rem; // 4px
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  }
+
+  .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+
+    &:hover {
+      background-color: #138496;
+      border-color: #117a8b;
+    }
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+
+    &:hover {
+      background-color: #c82333;
+      border-color: #bd2130;
+    }
+  }
+}

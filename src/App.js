@@ -5,6 +5,7 @@ import {Page} from 'components/Pages';
 import Home from 'views/home';
 import Users from 'views/users';
 
+
 function App() {
 	return (
 		<div className='app'>
