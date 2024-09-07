@@ -67,7 +67,7 @@ const deleteUser = async (userId) => {
     if (!response.ok) {
       throw new Error('Network response was not ok.');
     }
-    return userId; // Return the deleted user's ID
+    return userId; 
   } catch (error) {
     console.error('Delete error:', error);
     throw error;

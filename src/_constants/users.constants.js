@@ -1,4 +1,3 @@
-// _constants/users.constants.js
 export const usersConstants = {
   GET_ALL_REQUEST: 'GET_ALL_REQUEST',
   GET_ALL_SUCCESS: 'GET_ALL_SUCCESS',

@@ -1,13 +1,4 @@
 
-.edit-button{
-  background-color: rgb(112, 197, 56);
-  border:none;
-}
-
-.delete-button{
-  background-color: rgb(199, 57, 59);
-  border:none;
-}
 
 .user-action{
   display: flex;
@@ -15,6 +6,8 @@
   justify-content: space-between;
   align-items: center;
 }
+
+
 
 .user-table-wrapper {
   width:80vw;
@@ -34,10 +27,10 @@
 
 .custom-table {
   thead {
-    background-color: #f8f9fa; // Light gray background for the header
+    background-color: #f8f9fa;
     th {
       background-color: #595959;
-      color: #f8f9fa; // Dark gray text color
+      color: #f8f9fa; 
       font-weight: 500;
       text-align: center;
       padding: 0.75rem; 
@@ -49,7 +42,7 @@
   tbody {
     tr {
       &:nth-child(even) {
-        background-color: #f2f2f2; // Alternating row colors
+        background-color: #f2f2f2; 
       }
 
       &:hover {
@@ -57,54 +50,78 @@
       }
 
       td {
-        padding: 0.55rem; // 12px
+        padding: 0.55rem; 
         text-align: center;
         vertical-align: middle;
         justify-content: center;
         align-items: center;
-        overflow: hidden; // Prevents overflow of content
-        text-overflow: ellipsis; // Adds ellipsis for overflow text
+        overflow: hidden; 
+        text-overflow: ellipsis; 
         border: none;
       }
 
       &:not(:last-child) {
-        border-bottom: 1px solid #dee2e6; // Light gray border
+        border-bottom: 1px solid #dee2e6; 
       }
       
     }
   }
 
   .avatar-img {
-    border-radius: 50%; // Circular avatars
-    width: 3rem; // 48px
-    height: 3rem; // 48px
-    object-fit: cover; // Ensure the image covers the space
+    border-radius: 50%; 
+    width: 3rem; 
+    height: 3rem;
+    object-fit: cover; 
   }
 
   .btn {
-    font-size: 0.875rem; // 14px
-    padding: 0.5rem 1rem; // 8px 16px
-    border-radius: 0.25rem; // 4px
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem; 
+    border-radius: 0.25rem; 
     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   }
 
-  .btn-info {
-    background-color: #17a2b8;
-    border-color: #17a2b8;
+  .btn-edit {
+    background-color: rgb(112, 197, 56);
+    border:none;
+    margin-right: 2px;
 
     &:hover {
-      background-color: #138496;
-      border-color: #117a8b;
+      background-color: #349613;
     }
   }
 
   .btn-danger {
     background-color: #dc3545;
-    border-color: #dc3545;
+    border:none;
+    margin-left: 2px;
 
     &:hover {
       background-color: #c82333;
       border-color: #bd2130;
     }
   }
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.page-link {
+  color: #007bff;
+  &:hover {
+    color: #0056b3;
+    text-decoration: none;
+  }
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
 }

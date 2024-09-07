@@ -11,7 +11,6 @@ const initialState = {
 };
 
 const userReducer = (state, action) => {
-  console.log('Reducer action:', action);
   switch (action.type) {
     case usersConstants.GET_ALL_REQUEST:
     case usersConstants.UPDATE_USER_REQUEST:

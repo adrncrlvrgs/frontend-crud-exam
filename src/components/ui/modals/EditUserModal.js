@@ -1,4 +1,3 @@
-// components/EditUserModal.js
 import React, { useState, useContext } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { UserContext } from '../../../context/userContext';
