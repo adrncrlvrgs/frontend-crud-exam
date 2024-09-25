@@ -1,16 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../../context/userContext';
-import { getAllUsers } from '../../../_actions/users.action';
+import { UserContext } from 'context/userContext';
+import { getAllUsers } from '_actions/users.action';
 import { Table, Button, Pagination, PaginationItem, PaginationLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import SearchBar from 'components/ui/searchbar/searchBar';
 import { EditUserModal, DeleteUserModal, CreateUserModal } from 'components/ui/modals/index';
+import useDelete from './useDeleteUser';
 
 const UserTable = () => {
   const { state, dispatch } = useContext(UserContext);
   const { users, loading, error } = state;
+
+  const {userDelete , handleDelete, setUserDelete} = useDelete()
   const [filteredUsers, setFilteredUsers] = useState(users);
   const [editingUserId, setEditingUserId] = useState(null);
-  const [deletingUserId, setDeletingUserId] = useState(null);
+  // const [deletingUserId, setDeletingUserId] = useState(null);
   const [creatingUser, setCreatingUser] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [usersPerPage] = useState(10);
@@ -28,7 +31,7 @@ const UserTable = () => {
 
   const handleCreate = () => setCreatingUser(true);
   const handleEdit = (userId) => setEditingUserId(userId);
-  const handleDelete = (userId) => setDeletingUserId(userId);
+  // const handleDelete = (userId) => setDeletingUserId(userId);
 
   const handleSearch = (term) => {
     if (term === '') {
@@ -191,11 +194,11 @@ const UserTable = () => {
           user={users.find(user => user.id === editingUserId)} 
         />
       )}
-      {deletingUserId && (
+      {userDelete && (
         <DeleteUserModal 
-          isOpen={!!deletingUserId} 
-          toggle={closeModal(setDeletingUserId)} 
-          userId={deletingUserId} 
+          isOpen={!!userDelete} 
+          toggle={closeModal(setUserDelete)} 
+          userId={userDelete} 
         />
       )}
     </div>

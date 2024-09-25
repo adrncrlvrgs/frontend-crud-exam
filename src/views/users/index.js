@@ -1,6 +1,6 @@
 import React from 'react';
-import { UserProvider } from '../../context/userContext';
-import UserTable from '../../components/ui/table/userTable';
+import { UserProvider } from 'context/userContext';
+import UserTable from './userTable';
 import './index.scss'; 
 
 const Index = () => {
