@@ -13,7 +13,6 @@ const UserTable = () => {
   const {userDelete , handleDelete, setUserDelete} = useDelete()
   const [filteredUsers, setFilteredUsers] = useState(users);
   const [editingUserId, setEditingUserId] = useState(null);
-  // const [deletingUserId, setDeletingUserId] = useState(null);
   const [creatingUser, setCreatingUser] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [usersPerPage] = useState(10);
@@ -31,7 +30,6 @@ const UserTable = () => {
 
   const handleCreate = () => setCreatingUser(true);
   const handleEdit = (userId) => setEditingUserId(userId);
-  // const handleDelete = (userId) => setDeletingUserId(userId);
 
   const handleSearch = (term) => {
     if (term === '') {
